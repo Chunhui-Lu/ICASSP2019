@@ -24,21 +24,21 @@
 
     <div> <br/>This page describes the details of our LSTM based TTS engine used to generate speech samples for A/B preference test.</div>
     
-    <div> Our engine follows a classic statistical parametric speech synthesis architecture, which includes front-end, back-end and vocoder.</div>
+    <div> <br/>Our engine follows a classic statistical parametric speech synthesis architecture, which includes front-end, back-end and vocoder.</div>
 
-    <div><b>front-end:</b> Front-end processes the raw input text to generate input linguistic features. Text normalization, POS tagging, prosodic boundary prediction 
+    <div> <br/> <br/> <br/><b>front-end:</b> Front-end processes the raw input text to generate input linguistic features. Text normalization, POS tagging, prosodic boundary prediction 
       
       and G2P are included in this process. The generated linguistic features are 624-dim contatining 591-dim binary features(e.g. phonemes identities, POS tags) and 
       
       33-dim numerical features(e.g. the number of words in a prosodic phrase, position of the current syllable in a prosodic word).</div>
     
-    <div><b>back-end:</b> Back-end includes duration model and acoustic model. Duration model is a 3-layer BLSTM model which 
+    <div> <br/> <br/><b>back-end:</b> Back-end includes duration model and acoustic model. Duration model is a 3-layer BLSTM model which 
       
       contains 512 nodes(256 for each direction) in each layer. Acoustic model is a DNN-LSTM based model which contains a DNN layer
     
       of 256 nodes and 2 upper layers of LTSM with 256 nodes.</div>
     
-    <div><b>vocoder: </b>  WORLD vocoder is used to reconstruct speech from predicted 187-dim acoustic parameters(60-dim MGC, 1-dim logF0, 1-dim BAP and their delta and delta delta features, 1-dim UV flag).</div>
+    <div> <br/><b>vocoder: </b>  WORLD vocoder is used to reconstruct speech from predicted 187-dim acoustic parameters(60-dim MGC, 1-dim logF0, 1-dim BAP and their delta and delta delta features, 1-dim UV flag).</div>
     
   
 
